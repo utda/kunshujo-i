@@ -57,7 +57,7 @@
         }
     ],
     "related": "https://da.dl.itc.u-tokyo.ac.jp/portal/collection/tanaka/document/5f1aaff5-7454-4d4e-b1dd-80662ea489ee",
-    "seeAlso": "https://iiif.dl.itc.u-tokyo.ac.jp/repo/api/items/25185",
+    "seeAlso": "https://da.dl.itc.u-tokyo.ac.jp/portal/assets/5f1aaff5-7454-4d4e-b1dd-80662ea489ee?_format=json",
     "sequences": [
         {
             "@id": "https://iiif.dl.itc.u-tokyo.ac.jp/repo/iiif/5f1aaff5-7454-4d4e-b1dd-80662ea489ee/sequence/normal",
@@ -3213,7 +3213,7 @@
             "viewingHint": "non-paged"
         }
     ],
-    "thumbnail": "https://iiif.dl.itc.u-tokyo.ac.jp/repo/files/medium/bff57316e4a0b66ca6502ce378763b7d872e1336.jpg",
+    "thumbnail": "https://iiif.dl.itc.u-tokyo.ac.jp/iiif/kunshujou/A00_6010/026/026_0001.tif/full/!200,200/0/default.jpg",
     "viewingDirection": "right-to-left",
-    "within": "https://iiif.dl.itc.u-tokyo.ac.jp/repo/s/tanaka"
+    "within": "https://da.dl.itc.u-tokyo.ac.jp/portal/collection/tanaka"
 }

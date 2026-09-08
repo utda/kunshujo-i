@@ -56,8 +56,8 @@
             "value": "東京大学総合図書館 General Library in the University of Tokyo, JAPAN"
         }
     ],
-    "related": "https://iiif.dl.itc.u-tokyo.ac.jp/repo/s/tanaka/document/92ef19fb-2604-423e-99f6-9b95dec2a17a",
-    "seeAlso": "https://iiif.dl.itc.u-tokyo.ac.jp/repo/api/items/25205",
+    "related": "https://da.dl.itc.u-tokyo.ac.jp/portal/assets/92ef19fb-2604-423e-99f6-9b95dec2a17a",
+    "seeAlso": "https://da.dl.itc.u-tokyo.ac.jp/portal/assets/92ef19fb-2604-423e-99f6-9b95dec2a17a?_format=json",
     "sequences": [
         {
             "@id": "https://iiif.dl.itc.u-tokyo.ac.jp/repo/iiif/92ef19fb-2604-423e-99f6-9b95dec2a17a/sequence/normal",
@@ -7838,7 +7838,7 @@
             "viewingHint": "non-paged"
         }
     ],
-    "thumbnail": "https://iiif.dl.itc.u-tokyo.ac.jp/repo/files/medium/0e0553181f4323bc4abe51c94dd7bf814fa2d2b2.jpg",
+    "thumbnail": "https://iiif.dl.itc.u-tokyo.ac.jp/iiif/kunshujou/A00_6010/075/075_0001.tif/full/!200,200/0/default.jpg",
     "viewingDirection": "right-to-left",
-    "within": "https://iiif.dl.itc.u-tokyo.ac.jp/repo/s/tanaka"
+    "within": "https://da.dl.itc.u-tokyo.ac.jp/portal/collection/tanaka"
 }

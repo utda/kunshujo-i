@@ -56,8 +56,8 @@
             "value": "東京大学総合図書館 General Library in the University of Tokyo, JAPAN"
         }
     ],
-    "related": "https://iiif.dl.itc.u-tokyo.ac.jp/repo/s/tanaka/document/7f91ae1e-6ffa-4681-bb0f-862be1bd1cb0",
-    "seeAlso": "https://iiif.dl.itc.u-tokyo.ac.jp/repo/api/items/25201",
+    "related": "https://da.dl.itc.u-tokyo.ac.jp/portal/assets/7f91ae1e-6ffa-4681-bb0f-862be1bd1cb0",
+    "seeAlso": "https://da.dl.itc.u-tokyo.ac.jp/portal/assets/7f91ae1e-6ffa-4681-bb0f-862be1bd1cb0?_format=json",
     "sequences": [
         {
             "@id": "https://iiif.dl.itc.u-tokyo.ac.jp/repo/iiif/7f91ae1e-6ffa-4681-bb0f-862be1bd1cb0/sequence/normal",
@@ -11279,7 +11279,7 @@
             "viewingHint": "non-paged"
         }
     ],
-    "thumbnail": "https://iiif.dl.itc.u-tokyo.ac.jp/repo/files/medium/6f8581c9aef3030fe4c3d9ec1a8b5a0bfe02a501.jpg",
+    "thumbnail": "https://iiif.dl.itc.u-tokyo.ac.jp/iiif/kunshujou/A00_6010/031/031_0001.tif/full/!200,200/0/default.jpg",
     "viewingDirection": "right-to-left",
-    "within": "https://iiif.dl.itc.u-tokyo.ac.jp/repo/s/tanaka"
+    "within": "https://da.dl.itc.u-tokyo.ac.jp/portal/collection/tanaka"
 }
