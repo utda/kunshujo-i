@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      # Actions は可変タグではなく commit SHA で固定する。タグはメンテナが
+      # 乗っ取られた瞬間に中身が差し替わる (tj-actions/changed-files 2025-03)。
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '22'
+
+      # npm audit は package-lock.json だけで動くので npm ci は要らない。
+      # Nuxt 2 の依存はインストールに数分かかるうえ、peer 依存の衝突で
+      # 落ちることがあるため、監査だけを速く回す。
+      # BASELINE (既知の積み残し) は scripts/audit.mjs に理由と期限つきで
+      # 書いてある。そこに無いものが新しく出たら落ちる。
+      - name: audit
+        run: node scripts/audit.mjs
