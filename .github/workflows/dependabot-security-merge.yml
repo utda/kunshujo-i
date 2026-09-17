@@ -30,7 +30,7 @@ permissions:
 
 env:
   # マージ後に起動するワークフロー (空白区切り。無ければ空)
-  DEPLOY_WORKFLOWS: "ci.yml"
+  DEPLOY_WORKFLOWS: "gh-pages.yml"
 
 jobs:
   merge:
