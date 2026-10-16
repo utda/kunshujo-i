@@ -26,7 +26,7 @@
     "@nuxtjs/moment": "^1.6.1",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/sitemap": "^2.4.0",
-    "@nuxtjs/stylelint-module": "^4.0.0",
+    "@nuxtjs/stylelint-module": "^4.2.2",
     "@recogito/annotorious": "^2.5.0",
     "@recogito/annotorious-openseadragon": "^2.4.2",
     "@turf/turf": "^6.5.0",
@@ -36,7 +36,7 @@
     "dotenv": "^17.2.3",
     "fs": "^0.0.1-security",
     "leaflet": "^1.7.1",
-    "nuxt": "^2.15.4",
+    "nuxt": "^4.6.1",
     "nuxt-i18n": "^6.26.0",
     "nuxt-property-decorator": "^2.9.1",
     "openseadragon": "^2.4.2",
@@ -56,7 +56,7 @@
     "@nuxtjs/eslint-config": "^6.0.0",
     "@nuxtjs/eslint-config-typescript": "^6.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
-    "@nuxtjs/stylelint-module": "^4.0.0",
+    "@nuxtjs/stylelint-module": "^4.2.2",
     "@nuxtjs/vuetify": "^1.11.3",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.25.0",
@@ -65,8 +65,8 @@
     "eslint-plugin-prettier": "^3.4.0",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
-    "stylelint": "^13.13.0",
+    "stylelint": "^17.16.0",
     "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-standard": "^22.0.0"
+    "stylelint-config-standard": "^40.0.0"
   }
 }
