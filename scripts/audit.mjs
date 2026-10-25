@@ -206,6 +206,15 @@ const BASELINE = {
   'GHSA-wr3j-pwj9-hqq6', // webpack-dev-middleware (high)
   'GHSA-3h5v-q93c-6h6q', // ws (high)
   'GHSA-96hv-2xvq-fx4p', // ws (high)
+  // 2026-10-25 に追加: 09-08 の記録より後に公開された advisory。同じ理由（Nuxt 2 が固定する依存・ビルド時専用）で記録する。
+  'GHSA-4q55-j62x-fr9h', // devalue (high)
+  'GHSA-9rgm-9g3h-6x36', // devalue (high)
+  'GHSA-g84c-rxfj-3j2c', // webpack-dev-middleware (high)
+  'GHSA-hx4r-w6wj-j8fg', // devalue (high)
+  'GHSA-jjm6-p2m9-9w4x', // nuxt (high)
+  'GHSA-mcm9-63f2-9j32', // devalue (high)
+  'GHSA-r9w8-h9r3-54w4', // devalue (high)
+  'GHSA-wf3x-273g-mvxv', // devalue (high)
   ],
 }
 
