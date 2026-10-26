@@ -36,7 +36,7 @@ jobs:
   merge:
     if: github.event.pull_request.user.login == 'dependabot[bot]'
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 10
     steps:
       - uses: dependabot/fetch-metadata@25dd0e34f4fe68f24cc83900b1fe3fe149efef98 # v3.1.0
         id: meta
@@ -89,8 +89,8 @@ jobs:
         run: |
           set -uo pipefail
           sleep 60
-          i=0
-          while [ $i -lt 100 ]; do
+          i=0; z=0
+          while [ $i -lt 15 ]; do
             json=$(gh pr checks "$PR" -R "$REPO" --json name,bucket,workflow 2>/dev/null) || true  # 待ち中は終了コード 8
             [ -n "$json" ] || json='[]'
             others=$(echo "$json" | jq --arg s "$SELF" '[.[] | select(.workflow != $s)]')
@@ -100,6 +100,9 @@ jobs:
             echo "checks: total=$total pending=$pending failed=$bad"
             if [ "$bad" -gt 0 ]; then echo "::warning::失敗したチェックがあるので取り込みません"; exit 0; fi
             if [ "$total" -gt 0 ] && [ "$pending" -eq 0 ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+            # チェックが 0 件のまま 3 回続いたら、CI が無いとみなして待たずに終わる
+            if [ "$total" -eq 0 ]; then z=$((z+1)); else z=0; fi
+            if [ $z -ge 3 ]; then echo "::notice::他のチェックが見えないので、待たずに終わります"; exit 0; fi
             sleep 30; i=$((i+1))
           done
           echo "::warning::チェックが無い、または時間内に終わらないので取り込みません"
