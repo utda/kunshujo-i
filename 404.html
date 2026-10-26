@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <script>
+      var pathName = window.location.pathname + window.location.search
+      var repository = '' //kunshujo/
+      if (pathName.includes('/api/')) {
+        var base = window.location.protocol + '//' + window.location.host
+        location.href =
+          base +
+          '/' +
+          repository +
+          'snorql/?describe=' +
+          encodeURI(base + pathName)
+      } else {
+        var redirectPath = '/' + repository + 'redirect'
+        location.href = redirectPath + '?p=' + encodeURIComponent(pathName)
+      }
+    </script>
+  </head>
+</html>
