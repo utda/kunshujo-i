@@ -1,0 +1,34 @@
+name: Weekly audit
+
+# 依存の脆弱性を週 1 回確かめる。PR や push が無い週でも、新しく公開された
+# advisory に気づけるようにするため (ci.yml は PR / push のときしか走らない)。
+# 判定は ci.yml と同じ scripts/audit.mjs (BASELINE に無い high 以上が出たら失敗)。
+# package-lock.json だけで動くので npm ci はしない (数十秒で終わる)。
+
+on:
+  schedule:
+    - cron: '0 0 * * 1' # 毎週月曜 09:00 JST
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '22'
+
+      - name: audit (/)
+        run: node scripts/audit.mjs
+
+      # src/gcv2 は Firestore のバックアップ用の補助スクリプト。公開物には入らない。
+      # 結果を残すだけで、ここでは落とさない。
+      - name: audit (src/gcv2, 参考)
+        working-directory: src/gcv2
+        run: npm audit --package-lock-only --audit-level=high || true
