@@ -20,7 +20,17 @@ import { execFileSync } from 'node:child_process'
  * 外したもの」を置く場所。
  * @type {{ id: string, package: string, until: string, reason: string }[]}
  */
-const ALLOW = []
+const ALLOW = [
+  {
+    id: 'GHSA-qr28-fpjm-wq7f',
+    package: 'decode-uri-component',
+    until: '2026-12-08',
+    reason:
+      '修正版 0.5.1 は ESM 専用で、唯一の利用者 source-map-resolve 0.5.3 / 0.6.0 (webpack 4 → micromatch 3 → snapdragon 経由、ビルド時のみ) が ' +
+      'require() して関数として呼ぶため壊れる (2026-11-01 に確認)。入力はビルド時のローカルのソースマップ URL だけで、公開物には含まれない。' +
+      'BASELINE と同じく Nuxt 3 移行の判断と一緒に見直す。',
+  },
+]
 
 /**
  * 2026-09-08 時点で出ていた high 以上の advisory を、まとめて記録したもの。
